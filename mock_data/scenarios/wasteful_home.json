@@ -1,0 +1,14 @@
+{
+  "name": "Wasteful Home",
+  "description": "Old appliances, poor insulation, high consumption with many anomalies.",
+  "device_multipliers": {
+    "hvac": 1.8,
+    "fridge": 1.5,
+    "ev_charger": 1.0,
+    "washer_dryer": 1.6,
+    "lights": 1.8,
+    "vampire": 2.0
+  },
+  "anomaly_count": 12,
+  "notes": "Great for demos - lots of visible anomalies and high bills."
+}

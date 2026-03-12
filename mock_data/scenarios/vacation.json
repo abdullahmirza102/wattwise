@@ -1,0 +1,14 @@
+{
+  "name": "Vacation Mode",
+  "description": "Home is empty. Only fridge and standby loads running.",
+  "device_multipliers": {
+    "hvac": 0.1,
+    "fridge": 1.0,
+    "ev_charger": 0.0,
+    "washer_dryer": 0.0,
+    "lights": 0.05,
+    "vampire": 1.0
+  },
+  "anomaly_count": 2,
+  "notes": "Flat baseline. Good for testing anomaly detection sensitivity."
+}

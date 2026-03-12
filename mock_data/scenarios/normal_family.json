@@ -1,0 +1,14 @@
+{
+  "name": "Normal Family Home",
+  "description": "Typical 4-person household with standard appliances and usage patterns.",
+  "device_multipliers": {
+    "hvac": 1.0,
+    "fridge": 1.0,
+    "ev_charger": 1.0,
+    "washer_dryer": 1.0,
+    "lights": 1.0,
+    "vampire": 1.0
+  },
+  "anomaly_count": 7,
+  "notes": "Default scenario. Realistic mix of peaks and valleys."
+}

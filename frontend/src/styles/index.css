@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-slate-950 text-slate-100;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-slate-900;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-slate-700 rounded-full;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-slate-600;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-slate-900/80 backdrop-blur-sm border border-slate-800 rounded-2xl p-6 transition-all duration-300;
+  }
+  .card:hover {
+    @apply border-slate-700 shadow-glow;
+  }
+  .card-compact {
+    @apply bg-slate-900/80 backdrop-blur-sm border border-slate-800 rounded-xl p-4;
+  }
+  .kpi-card {
+    @apply card relative overflow-hidden;
+  }
+  .kpi-card::before {
+    content: '';
+    @apply absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-ww-blue-500 to-ww-amber-500;
+  }
+  .btn-primary {
+    @apply px-4 py-2 bg-ww-blue-600 hover:bg-ww-blue-500 text-white rounded-lg font-medium
+           transition-all duration-200 shadow-glow hover:shadow-glow-lg;
+  }
+  .btn-ghost {
+    @apply px-4 py-2 bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white
+           rounded-lg font-medium transition-all duration-200 border border-slate-700;
+  }
+  .badge {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+  }
+  .badge-critical {
+    @apply badge bg-red-500/20 text-red-400 border border-red-500/30;
+  }
+  .badge-warning {
+    @apply badge bg-amber-500/20 text-amber-400 border border-amber-500/30;
+  }
+  .badge-info {
+    @apply badge bg-blue-500/20 text-blue-400 border border-blue-500/30;
+  }
+  .skeleton {
+    @apply animate-pulse bg-slate-800 rounded-lg;
+  }
+  .nav-link {
+    @apply flex items-center gap-3 px-4 py-3 rounded-xl text-slate-400 
+           hover:text-white hover:bg-slate-800/60 transition-all duration-200 font-medium;
+  }
+  .nav-link.active {
+    @apply text-white bg-slate-800/80 shadow-glow border border-ww-blue-500/30;
+  }
+}
+
+/* Recharts custom styles */
+.recharts-cartesian-grid-horizontal line,
+.recharts-cartesian-grid-vertical line {
+  stroke: #1e293b;
+}
+.recharts-text {
+  fill: #94a3b8;
+  font-size: 12px;
+}
+
+/* Page transitions */
+.page-enter {
+  opacity: 0;
+  transform: translateY(8px);
+}
+.page-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 300ms ease-out, transform 300ms ease-out;
+}

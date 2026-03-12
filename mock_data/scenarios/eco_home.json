@@ -1,0 +1,14 @@
+{
+  "name": "Eco Home",
+  "description": "Energy-conscious home with solar panels, efficient appliances, and EV.",
+  "device_multipliers": {
+    "hvac": 0.5,
+    "fridge": 0.7,
+    "ev_charger": 1.2,
+    "washer_dryer": 0.6,
+    "lights": 0.4,
+    "vampire": 0.5
+  },
+  "anomaly_count": 3,
+  "notes": "Low overall consumption. EV charging is the main load."
+}
