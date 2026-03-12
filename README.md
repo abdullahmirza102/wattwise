@@ -55,7 +55,7 @@ Most utility dashboards are hard to use and give poor visibility. WattWise solve
 flowchart LR
     U[User Browser] --> FE[Frontend\nReact + Tailwind + Recharts\nNginx :3000]
     FE -->|REST /api/*| API[FastAPI Backend :8000]
-    FE -->|WebSocket /ws/homes/{id}/live| API
+    FE -->|WebSocket /ws/homes/:id/live| API
 
     API --> DB[(PostgreSQL)]
     API --> R[(Redis Cache)]
